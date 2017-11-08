@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "fdf.h"
+#include "fractol.h"
 
 void	error(char *str)
 {
@@ -19,12 +18,17 @@ void	error(char *str)
 	exit(EXIT_FAILURE);
 }
 
+void	init_env(t_env *env)
+{
+	env->mlx = mlx_init();
+	
+}
 int		main(int argc, char **argv)
 {
-	t_map	map;
-
+	t_env	env;
+	init_env(frac_type(&env);
 	if (argc != 2)
-		error("Invalid number of arguments");
+		error("Invalid number of argumentsi\nUsage: \"./fractol julia\"");
 	defaultmap(&map, 'a');
 	dims(argv[1], &(map.width), &(map.height));
 	getmatrix(argv[1], &map);

@@ -48,21 +48,18 @@ typedef struct		s_node
 	t_clr			bound[2];
 	int				stepct;
 }					t_node;
-typedef struct		s_map
+typedef struct		s_env
 {
-	int				**matrix;
 	void			*mlx;
 	void			*win;
 	t_img			image;
-	int				width;
-	int				height;
-	int				maxz;
-	int				minz;
+	int				imgw;
+	int				imgh;
 	int				trans[2];
 	int				scale;
 	int				last;
-	int				ww;
-	int				wh;
+	int				winw;
+	int				winh;
 	float			rot[3];
 	t_clr			clr0;
 	t_clr			clr1;
